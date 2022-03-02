@@ -1,26 +1,16 @@
 class ParkingSystem {
-    int big=0,medium=0,small=0;
-    public ParkingSystem(int big, int medium, int small) {
-        this.big=big;
-        this.medium=medium;
-        this.small=small;
-    }
+    int parkings[] = {0, 0, 0};
+
+public ParkingSystem(int big, int medium, int small) {
+    this.parkings[0] = big;
+    this.parkings[1] = medium;
+    this.parkings[2] = small;
+}
+
+public boolean addCar(int carType) {
+    return this.parkings[--carType]-- > 0;
+}
     
-    public boolean addCar(int carType) {
-       if(carType==1){
-           if(big==0) return false;
-           big--;
-       }
-        if(carType==2){
-           if(medium==0) return false;
-           medium--;
-       } 
-        if(carType==3){
-           if(small==0) return false;
-           small--;
-       } 
-    return true;
-    }
 }
 
 /**
