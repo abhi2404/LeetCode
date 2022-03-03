@@ -5,7 +5,7 @@ class Solution {
 		 }		
 		 int max = 0 ;
 		 int sofarMin = prices[0] ;
-	     for (int i = 0 ; i < prices.length ; ++i) {
+	     for (int i = 1 ; i < prices.length ; i++) {
 	    	 if (prices[i] > sofarMin) {
 	    		 max = Math.max(max, prices[i] - sofarMin) ;
 	    	 } else{
